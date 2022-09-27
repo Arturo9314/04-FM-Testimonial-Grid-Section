@@ -1,0 +1,48 @@
+@use "globals";
+$Moderateviolet: hsl(263, 55%, 52%);
+$Verydarkgrayishblue: hsl(217, 19%, 35%);
+$Verydarkblackishblue: hsl(219, 29%, 14%);
+$Lightgray: hsl(0, 0%, 81%);
+
+.daniel{
+    background-color: $Moderateviolet !important;
+    img{
+        border-color:hsl(263, 55%, 70%);
+    }
+}
+.jonathan{
+    background-color:$Verydarkgrayishblue !important;
+    img{
+        border-color:$Verydarkgrayishblue ;
+    }
+}
+.patrick{
+    background-color:$Verydarkblackishblue !important;
+    img{
+        border-color:$Moderateviolet;
+    }
+}
+.kira, .jeanette{
+    background-color:globals.$White;
+}
+.daniel, .jonathan, .patrick{
+    color: globals.$White;
+}
+.intro{
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.125;
+    padding-bottom: 0.5rem;
+}
+.testimonio{
+    padding-top: 0.5rem;
+    line-height: 1.2;
+    q{
+        font-size: 1.115rem;
+        opacity: 0.7;
+        
+    }    
+}
+#kira{
+    height: 100%;
+}

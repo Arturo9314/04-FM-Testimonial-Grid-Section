@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+* {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8125rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+}
+
+body {
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+.card-header {
+  background: none;
+  border-bottom: 0;
+}
+
+.card {
+  height: 100%;
+  padding: 1rem;
+}
+.card .card-body {
+  padding-top: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.main-row {
+  width: 80%;
+  margin-top: 4.85%;
+}
+
+.row-1, .row-2, .second-col {
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+}
+.card-header .data {
+  padding-left: 1rem;
+}
+.card-header .data .name {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.card-header .data .verified {
+  font-size: 1.05rem;
+}
+
+.verified::after {
+  content: "Verified Graduate";
+  opacity: 0.5;
+}
+
+img {
+  border-radius: 50%;
+  border: 0.125rem solid hsl(0deg, 0%, 100%);
+  width: 2.5rem;
+}
+
+@media (max-width: 994px) {
+  .main-row {
+    margin-top: 3.8rem;
+  }
+  .first-col {
+    width: 100%;
+  }
+}
+@media (max-width: 675px) {
+  .col-8 {
+    width: 100%;
+  }
+  .row-1 .col-8, .row-2 .col {
+    margin-bottom: 1.5rem;
+  }
+  .main-row {
+    margin-top: 3.8rem;
+  }
+}
+.daniel {
+  background-color: hsl(263deg, 55%, 52%) !important;
+}
+.daniel img {
+  border-color: hsl(263deg, 55%, 70%);
+}
+
+.jonathan {
+  background-color: hsl(217deg, 19%, 35%) !important;
+}
+.jonathan img {
+  border-color: hsl(217deg, 19%, 35%);
+}
+
+.patrick {
+  background-color: hsl(219deg, 29%, 14%) !important;
+}
+.patrick img {
+  border-color: hsl(263deg, 55%, 52%);
+}
+
+.kira, .jeanette {
+  background-color: hsl(0deg, 0%, 100%);
+}
+
+.daniel, .jonathan, .patrick {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.intro {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.125;
+  padding-bottom: 0.5rem;
+}
+
+.testimonio {
+  padding-top: 0.5rem;
+  line-height: 1.2;
+}
+.testimonio q {
+  font-size: 1.115rem;
+  opacity: 0.7;
+}
+
+#kira {
+  height: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

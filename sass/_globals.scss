@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+$Lightgrayishblue: hsl(210, 46%, 95%); //Fondo
+$White: hsl(0, 0%, 100%);
+
+*{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: .8125rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 500;
+}
+body{
+    background-color: $Lightgrayishblue;
+}
+.card-header{
+    background: none;
+    border-bottom: 0;
+}
+.card{
+    height: 100%;
+    padding: 1rem;
+    .card-body{
+        padding-top: 0;
+    }
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-height: 100vh;
+}
+.main-row{
+    width: 80%;
+    margin-top: 4.85%;
+}
+
+.row-1, .row-2, .second-col{
+    margin-bottom: 1.5rem;
+}
+.card-header{
+    display: flex;
+    .data{
+        padding-left: 1rem;
+        .name{
+            margin-bottom: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        .verified{
+            font-size: 1.05rem;
+        }
+    }
+}
+.verified::after{
+    content: 'Verified Graduate';
+    opacity: .5;
+}
+img{
+    border-radius: 50%;
+    border: 0.125rem solid $White;
+    width: 2.5rem;
+}
+
+@media(max-width: 994px){
+    .main-row{
+        margin-top: 3.8rem;
+    }
+    .first-col{
+        width: 100%;
+    }
+}
+
+@media(max-width: 675px){
+    .col-8{
+        width: 100%;
+    }
+    .row-1 .col-8, .row-2 .col{
+        margin-bottom: 1.5rem;
+    }
+    .main-row{
+        margin-top: 3.8rem;
+    }
+}
