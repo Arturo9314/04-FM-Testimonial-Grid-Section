@@ -4,45 +4,52 @@ $Verydarkgrayishblue: hsl(217, 19%, 35%);
 $Verydarkblackishblue: hsl(219, 29%, 14%);
 $Lightgray: hsl(0, 0%, 81%);
 
-.daniel{
-    background-color: $Moderateviolet !important;
+article{
+    border-radius: .625rem;
+    padding: 1.875rem 2.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    .data{
+        padding-left: 0.5rem;
+        .name{
+            margin-bottom: 0;
+        }
+        .verified{
+            font-size: calc(globals.$main-font-size + 0.25rem);
+        }
+    }
+}
+.verified::after{
+    content: 'Verified Graduate';
+    opacity: .5;
+}
+.card-1{
+    background-color: $Moderateviolet;
     img{
         border-color:hsl(263, 55%, 70%);
     }
 }
-.jonathan{
-    background-color:$Verydarkgrayishblue !important;
+.card-2{
+    background-color:$Verydarkgrayishblue;
     img{
         border-color:$Verydarkgrayishblue ;
     }
 }
-.patrick{
-    background-color:$Verydarkblackishblue !important;
+.card-4{
+    background-color:$Verydarkblackishblue;
     img{
         border-color:$Moderateviolet;
     }
 }
-.kira, .jeanette{
+.card-5, .card-3{
     background-color:globals.$White;
 }
-.daniel, .jonathan, .patrick{
+.card-1, .card-2, .card-4{
     color: globals.$White;
-}
-.intro{
-    font-size: 1.6rem;
-    font-weight: 600;
-    line-height: 1.125;
-    padding-bottom: 0.5rem;
-}
-.testimonio{
-    padding-top: 0.5rem;
-    line-height: 1.2;
-    q{
-        font-size: 1.115rem;
-        opacity: 0.7;
-        
-    }    
-}
-#kira{
-    height: 100%;
 }

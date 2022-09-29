@@ -1,64 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
-* {
-  font-family: "Barlow Semi Condensed", sans-serif;
-  font-size: 0.8125rem;
-  margin: 0;
+*, ::before, ::after {
   padding: 0;
-  font-weight: 500;
+  margin: 0;
 }
 
-body {
-  background-color: hsl(210deg, 46%, 95%);
-}
-
-.card-header {
-  background: none;
-  border-bottom: 0;
-}
-
-.card {
-  height: 100%;
-  padding: 1rem;
-}
-.card .card-body {
-  padding-top: 0;
-}
-
-main {
+html {
+  font-size: 62.5%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  box-sizing: border-box;
+  place-items: center;
   min-height: 100vh;
 }
 
-.main-row {
-  width: 80%;
-  margin-top: 4.85%;
-}
-
-.row-1, .row-2, .second-col {
-  margin-bottom: 1.5rem;
-}
-
-.card-header {
-  display: flex;
-}
-.card-header .data {
-  padding-left: 1rem;
-}
-.card-header .data .name {
-  margin-bottom: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-.card-header .data .verified {
-  font-size: 1.05rem;
-}
-
-.verified::after {
-  content: "Verified Graduate";
-  opacity: 0.5;
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 0.8125rem;
+  background-color: hsl(210deg, 46%, 95%);
+  grid-auto-flow: column;
+  grid-template-rows: 1fr;
 }
 
 img {
@@ -67,72 +26,127 @@ img {
   width: 2.5rem;
 }
 
-@media (max-width: 994px) {
-  .main-row {
-    margin-top: 3.8rem;
+main {
+  display: grid;
+  width: 60%;
+  grid-template-columns: 75% 1fr;
+  column-gap: 2.25rem;
+  margin: 5.25rem auto;
+}
+
+.first {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 1.5rem;
+}
+
+.one {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 1.5rem;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1.5rem;
+}
+
+.second, .third, .first-b {
+  padding: 0;
+  display: flex;
+  flex: 1;
+}
+
+blockquote {
+  opacity: 0.7;
+  font-size: 1.0225rem;
+}
+
+blockquote::after {
+  content: ' "';
+}
+
+blockquote::before {
+  content: '" ';
+}
+
+@media only screen and (max-width: 992px) {
+  main {
+    grid-template-columns: 1fr;
+    margin-top: 5.25rem;
   }
-  .first-col {
-    width: 100%;
+  .first-b {
+    margin-top: 1.5rem;
   }
 }
-@media (max-width: 675px) {
-  .col-8 {
-    width: 100%;
+@media only screen and (max-width: 576px) {
+  .first {
+    gap: 0;
   }
-  .row-1 .col-8, .row-2 .col {
-    margin-bottom: 1.5rem;
+  .one, .two {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
-  .main-row {
-    margin-top: 3.8rem;
+  .first-b, .second, .third {
+    margin-top: 1.5rem;
   }
 }
-.daniel {
-  background-color: hsl(263deg, 55%, 52%) !important;
+article {
+  border-radius: 0.625rem;
+  padding: 1.875rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
-.daniel img {
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+header .data {
+  padding-left: 0.5rem;
+}
+header .data .name {
+  margin-bottom: 0;
+}
+header .data .verified {
+  font-size: 1.0625rem;
+}
+
+.verified::after {
+  content: "Verified Graduate";
+  opacity: 0.5;
+}
+
+.card-1 {
+  background-color: hsl(263deg, 55%, 52%);
+}
+.card-1 img {
   border-color: hsl(263deg, 55%, 70%);
 }
 
-.jonathan {
-  background-color: hsl(217deg, 19%, 35%) !important;
+.card-2 {
+  background-color: hsl(217deg, 19%, 35%);
 }
-.jonathan img {
+.card-2 img {
   border-color: hsl(217deg, 19%, 35%);
 }
 
-.patrick {
-  background-color: hsl(219deg, 29%, 14%) !important;
+.card-4 {
+  background-color: hsl(219deg, 29%, 14%);
 }
-.patrick img {
+.card-4 img {
   border-color: hsl(263deg, 55%, 52%);
 }
 
-.kira, .jeanette {
+.card-5, .card-3 {
   background-color: hsl(0deg, 0%, 100%);
 }
 
-.daniel, .jonathan, .patrick {
+.card-1, .card-2, .card-4 {
   color: hsl(0deg, 0%, 100%);
-}
-
-.intro {
-  font-size: 1.6rem;
-  font-weight: 600;
-  line-height: 1.125;
-  padding-bottom: 0.5rem;
-}
-
-.testimonio {
-  padding-top: 0.5rem;
-  line-height: 1.2;
-}
-.testimonio q {
-  font-size: 1.115rem;
-  opacity: 0.7;
-}
-
-#kira {
-  height: 100%;
 }
 
 .row .container-btn {
