@@ -32,7 +32,7 @@ main{
     display: grid;
     width: 60%;
     grid-template-columns: 75% 1fr;
-    column-gap: calc($main-gap + 0.75rem);
+    column-gap: 0;
     margin: $main-gap*3.5 auto;
 }
 
@@ -51,7 +51,7 @@ main{
     grid-template-columns: 1fr 2fr;
     column-gap: $main-gap;
 }
-.second, .third, .first-b{
+.second, .third, .first-b, .div-first-b{
     padding: 0;
     display: flex;
     flex: 1;
@@ -68,6 +68,11 @@ blockquote::before{
 }
 
 @media only screen and (max-width: 992px){
+    html{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     main{
         grid-template-columns: 1fr;
         margin-top: $main-gap*3.5;
@@ -78,6 +83,9 @@ blockquote::before{
 }
 
 @media only screen and (max-width: 576px){
+    *, ::after,::before{
+        box-sizing: unset;
+    }
     .first{
         gap: 0;
     }

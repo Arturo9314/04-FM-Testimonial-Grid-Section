@@ -3,13 +3,11 @@ $button-bg: $mycolor;
 $button-text-color: #fff;
 $baby-blue: #f8faff;
 
-.row .container-btn{
-    height: 0%!important;
-}
 .bubbly-button{
     margin-top: .3125rem;
     width: 100px;
     display: flex;
+    justify-content: center;
     font-size: 0.65rem;
     padding: 1em 2em;
     -webkit-appearance: none;

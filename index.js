@@ -15,7 +15,7 @@ const animateButton = function(e) {
 ///main
 const bubblyButtons = document.getElementsByClassName("bubbly-button"); 
 const containers = document.querySelectorAll(".container")
-const draggables = document.querySelectorAll(".card-name")
+const draggables = document.querySelectorAll(".dragg")
 
 for (let i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('click', animateButton, false);
